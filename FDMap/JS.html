@@ -12,7 +12,7 @@
   <meta http-quiv="pragma" cotent="no-cache,must-revalidate">
   <meta http-quiv="expires" cotent="0">
     
-    <link rel="preload" href="/assets/css/0.styles.019fe3db.css" as="style"><link rel="preload" href="/assets/js/app.08e121f0.js" as="script"><link rel="preload" href="/assets/js/2.9b2c206e.js" as="script"><link rel="preload" href="/assets/js/9.a9a34424.js" as="script"><link rel="prefetch" href="/assets/js/10.9d85fd93.js"><link rel="prefetch" href="/assets/js/11.f3dbfea6.js"><link rel="prefetch" href="/assets/js/12.d6f42a33.js"><link rel="prefetch" href="/assets/js/13.0c7a6aab.js"><link rel="prefetch" href="/assets/js/14.379d5681.js"><link rel="prefetch" href="/assets/js/15.a795006f.js"><link rel="prefetch" href="/assets/js/16.d65d283d.js"><link rel="prefetch" href="/assets/js/17.265fbf75.js"><link rel="prefetch" href="/assets/js/18.730f1630.js"><link rel="prefetch" href="/assets/js/19.905bc299.js"><link rel="prefetch" href="/assets/js/20.7046d84e.js"><link rel="prefetch" href="/assets/js/21.abf3fa17.js"><link rel="prefetch" href="/assets/js/22.21efee47.js"><link rel="prefetch" href="/assets/js/23.7eb77dc1.js"><link rel="prefetch" href="/assets/js/24.f5af4b3a.js"><link rel="prefetch" href="/assets/js/25.cbde6c41.js"><link rel="prefetch" href="/assets/js/26.fdacd15c.js"><link rel="prefetch" href="/assets/js/3.b6959132.js"><link rel="prefetch" href="/assets/js/4.1ff495fc.js"><link rel="prefetch" href="/assets/js/5.9aadbdc1.js"><link rel="prefetch" href="/assets/js/6.c092145a.js"><link rel="prefetch" href="/assets/js/7.70cfcfc9.js"><link rel="prefetch" href="/assets/js/8.b55986c0.js">
+    <link rel="preload" href="/assets/css/0.styles.019fe3db.css" as="style"><link rel="preload" href="/assets/js/app.81045a9c.js" as="script"><link rel="preload" href="/assets/js/2.9b2c206e.js" as="script"><link rel="preload" href="/assets/js/9.4a9d486a.js" as="script"><link rel="prefetch" href="/assets/js/10.c56fd175.js"><link rel="prefetch" href="/assets/js/11.cf27f557.js"><link rel="prefetch" href="/assets/js/12.90b97f42.js"><link rel="prefetch" href="/assets/js/13.111bb62c.js"><link rel="prefetch" href="/assets/js/14.0f643126.js"><link rel="prefetch" href="/assets/js/15.ac2b0c08.js"><link rel="prefetch" href="/assets/js/16.bd74a493.js"><link rel="prefetch" href="/assets/js/17.14cb9a37.js"><link rel="prefetch" href="/assets/js/18.75410ea0.js"><link rel="prefetch" href="/assets/js/19.905bc299.js"><link rel="prefetch" href="/assets/js/20.07e4c8cc.js"><link rel="prefetch" href="/assets/js/21.59783a47.js"><link rel="prefetch" href="/assets/js/22.97731d84.js"><link rel="prefetch" href="/assets/js/23.47643b35.js"><link rel="prefetch" href="/assets/js/24.86bab49f.js"><link rel="prefetch" href="/assets/js/25.0d6fb481.js"><link rel="prefetch" href="/assets/js/26.fdacd15c.js"><link rel="prefetch" href="/assets/js/3.b6959132.js"><link rel="prefetch" href="/assets/js/4.1ff495fc.js"><link rel="prefetch" href="/assets/js/5.9aadbdc1.js"><link rel="prefetch" href="/assets/js/6.e8994502.js"><link rel="prefetch" href="/assets/js/7.c200c714.js"><link rel="prefetch" href="/assets/js/8.e5cc7dcc.js">
     <link rel="stylesheet" href="/assets/css/0.styles.019fe3db.css">
   </head>
   <body>
@@ -52,7 +52,17 @@ console<span class="token punctuation">.</span><span class="token function">log<
 </code></pre></div><h2 id="判断数据类型"><a href="#判断数据类型" aria-hidden="true" class="header-anchor">#</a> 判断数据类型</h2> <h3 id="typeof"><a href="#typeof" aria-hidden="true" class="header-anchor">#</a> typeof</h3> <p>返回数据类型的<code>字符串表达式</code>  undefined/数字/字符串/布尔值/function/symbol</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">typeof</span> <span class="token number">NaN</span>  <span class="token string">'number'</span>
 <span class="token keyword">typeof</span> <span class="token keyword">null</span> <span class="token string">'object'</span>
 <span class="token keyword">typeof</span> array <span class="token string">'object'</span>
+<span class="token keyword">typeof</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token string">'object'</span>
+<span class="token keyword">typeof</span> Array <span class="token string">'function'</span>
+<span class="token keyword">typeof</span> <span class="token function">Array</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token string">'object'</span>
 <span class="token keyword">typeof</span> object <span class="token string">'object'</span>
+<span class="token keyword">typeof</span> Object  <span class="token string">'function'</span>
+<span class="token keyword">typeof</span> <span class="token function">Object</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token string">'object'</span>
+<span class="token keyword">typeof</span> Function <span class="token string">'function'</span>
+<span class="token keyword">typeof</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token string">'function'</span>
+ <span class="token comment">//Array本身是js内建的一个构造函数，</span>
+<span class="token comment">//当他在调用或者初始化的时候，才会typeof成对象。</span>
+ <span class="token comment">//构造函数，不实例化，也只是个函数。</span>
 </code></pre></div><p>不能判断 null -&gt; object /array-&gt;object /object-&gt;object</p> <h3 id="instanceof"><a href="#instanceof" aria-hidden="true" class="header-anchor">#</a> instanceof</h3> <p><code>instanceof</code> 可以正确判断对象的类型，因为内部机制是通过判断对象的原型链中是不是找到类型<code>prototype</code></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token keyword">instanceof</span><span class="token punctuation">(</span><span class="token parameter">left<span class="token punctuation">,</span> right</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token comment">// 获得类型的原型</span>
     <span class="token keyword">let</span> prototype <span class="token operator">=</span> right<span class="token punctuation">.</span>prototype
@@ -557,6 +567,6 @@ wss<span class="token punctuation">.</span><span class="token function">on</span
       ←
       <a href="/FDMap/CSS.html" class="prev">CSS</a></span> <span class="next"><a href="/FDMap/DOM.html">Dom</a>→
     </span></p></div> </main></div><div class="global-ui"></div></div>
-    <script src="/assets/js/app.08e121f0.js" defer></script><script src="/assets/js/2.9b2c206e.js" defer></script><script src="/assets/js/9.a9a34424.js" defer></script>
+    <script src="/assets/js/app.81045a9c.js" defer></script><script src="/assets/js/2.9b2c206e.js" defer></script><script src="/assets/js/9.4a9d486a.js" defer></script>
   </body>
 </html>
